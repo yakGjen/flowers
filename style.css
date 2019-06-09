@@ -155,12 +155,27 @@ h2 {
   box-shadow: 0 0 10px -2px grey;
 }
 
-.address {
+.payment {
   padding: 20px 50px;
   box-sizing: border-box;
   
   background: #f9f9fa;
 }
+.payment p {
+  text-align: justify;
+}
+
+.address {
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+/*.adderss-map {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1044px;
+  height: 500px;
+}*/
 
 
 .up {
