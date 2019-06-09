@@ -59,22 +59,9 @@ animate();
 
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('up') || event.target.classList.contains('fa-arrow-up')) {
-    /*document.documentElement.style.transition = 'all 1s 0s linear';
-    window.scrollTo(0, 0);
-    document.documentElement.style.transition = '';*/
-    scrollToTop(500);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 });
-
-let scrollInterval;
-
-const scrollToTop = (scrollDuration) => {
-  let scrollStep = -window.scrollY / (scrollDuration / 15),
-  scrollInterval = setInterval(function(){
-    if ( window.scrollY != 0 ) {
-      window.scrollBy( 0, scrollStep );
-    } else {
-      clearInterval(scrollInterval); 
-    }
-  },15);
-}
