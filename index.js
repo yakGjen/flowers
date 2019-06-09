@@ -64,4 +64,24 @@ document.addEventListener('click', (event) => {
       behavior: "smooth",
     });
   }
+  if (event.target.classList.contains('nav-about')) scrollToElem(document.querySelector('.about'));
+  if (event.target.classList.contains('nav-payment')) scrollToElem(document.querySelector('.payment'));
+  if (event.target.classList.contains('nav-contacts')) scrollToElem(document.querySelector('.address'));
 });
+
+const scrollToElem = (elem) => {
+  const pageY = elem.pageY;
+  window.scrollTo({
+      top: getCoords(elem).top,
+      behavior: "smooth",
+    });
+};
+
+const getCoords = (elem) => {
+  let box = elem.getBoundingClientRect();
+  
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
+  };
+};

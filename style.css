@@ -125,17 +125,23 @@ html, body {
   box-sizing: border-box;
   background: #f9f9fa;
 }
-.about .img-logo {
+.about div {
+  display: inline-block;
+}
+.about .about-img {
   width: 20%;
   margin-right: 20px;
-  float: left;
+  
+  vertical-align: top;
 }
-h2 {
-  margin: 0 0 20px 0;
-  font-family: 'Lobster', cursive;
-  font-size: 2em;
+.about .img-logo {
+  width: 100%;
+}
+.about-content {
+  width: 75%;
 }
 .about p {
+  margin-top: 0;
   text-align: justify;
 }
 
@@ -177,6 +183,11 @@ h2 {
   height: 500px;
 }*/
 
+h2 {
+  margin: 0 0 20px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+}
 
 .up {
   width: 50px;
