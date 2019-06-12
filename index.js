@@ -5,7 +5,8 @@ const addSliderButtons = (count) => {
   for (let i = 0; i < count; i++) {
     const buttonItem = document.createElement('div');
     buttonItem.classList.add('slider-button-item');
-    buttonItem.classList.add(`slider-item-${i+1}`);
+    //buttonItem.classList.add(`slider-button-item-${i+1}`);
+    buttonItem.id = `slider-button-item-${i+1}`;
     
     if (i === 0) buttonItem.classList.add('slider-button-item-selected');
     
@@ -24,6 +25,7 @@ const addImg = () => {
     img.alt = `${i+1}`;
     
     img.classList.add('slider-item');
+    img.classList.add(`slider-item-${i+1}`);
     
     container.appendChild(img);
   }
@@ -53,6 +55,10 @@ const animate = () => {
   }, 3000);
 };
 
+const selectImg = (elem) => {
+  
+};
+
 addImg();
 animate();
 
@@ -67,6 +73,8 @@ document.addEventListener('click', (event) => {
   if (event.target.classList.contains('nav-about')) scrollToElem(document.querySelector('.about'));
   if (event.target.classList.contains('nav-payment')) scrollToElem(document.querySelector('.payment'));
   if (event.target.classList.contains('nav-contacts')) scrollToElem(document.querySelector('.address'));
+  
+  if (event.target.classList.contains('slider-button-item')) selectImg(event.target);
 });
 
 const scrollToElem = (elem) => {

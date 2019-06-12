@@ -11,7 +11,8 @@ html, body {
   
   position: relative;
   
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Philosopher', sans-serif;
+  color: #4f4c4c;
 }
 
 .header {
@@ -28,9 +29,11 @@ html, body {
 
   /*background: #f7f7f7;*/
   border-bottom: solid 1px grey;
+  color: black;
 }
 
 .header-title {
+  width: 20%;
   font-size: 1.3em;
   font-family: 'Lobster', cursive;
 }
@@ -38,6 +41,8 @@ html, body {
 .menu {
   margin: 0;
   padding: 0;
+  
+  width: 60%;
   
   display: flex;
   justify-content: center;
@@ -56,6 +61,13 @@ html, body {
 
 .menu a:hover {
   text-shadow: 0 0 15px grey;
+}
+
+.socials {
+  width: 20%;
+  
+  display: flex;
+  justify-content: flex-end;
 }
 
 .socials i {
@@ -145,27 +157,9 @@ html, body {
   text-align: justify;
 }
 
-.stocks {
-  padding: 20px 50px;
-  box-sizing: border-box;
-}
-.stocks-item-wrap {
-  display: flex;
-  justify-content: space-around;
-}
-
-.stocks-item {
-  width: 200px;
-  height: 200px;
-  
-  box-shadow: 0 0 10px -2px grey;
-}
-
 .payment {
   padding: 20px 50px;
   box-sizing: border-box;
-  
-  background: #f9f9fa;
 }
 .payment p {
   text-align: justify;
@@ -174,6 +168,8 @@ html, body {
 .address {
   padding: 20px 50px;
   box-sizing: border-box;
+  
+  background: #f9f9fa;
 }
 
 /*.adderss-map {
@@ -185,8 +181,11 @@ html, body {
 
 h2 {
   margin: 0 0 20px 0;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Pacifico', cursive;
   font-size: 2em;
+  
+  color: black;
 }
 
 .up {
@@ -227,20 +226,92 @@ h2 {
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .menu {
+    width: 70%;
+  }
+  
+  .menu a {
+    padding: 0 10px;
+  }
+  
+  .socials {
+    width: 10%;
+  }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+  .menu nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu a {
+    padding: 5px;
+  }
+  
+  .main-slider {
+    width: 90%;
+  }
+}
 
+@media (max-width: 580px) {
+  .about .about-img {
+    width: 50%;
+    margin: 0 auto 20px auto!important;
+    display: block;
+  }
+  
+  .about-content {
+    width: 100%;
+    margin: 0 auto;
+    display: block !important;
+  }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  
+  .header-title {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .menu {
+    width: 100%;
+  }
+  
+  .menu nav {
+    
+  }
+  
+  .socials {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .main-slider {
+    height: 500px;
+  }
+  
+  .about .about-img {
+    width: 70%;
+  }
+}
 
+@media (max-width: 410px) {
+  .main-slider {
+    height: 400px;
+  }
 }
 
 /* Iphone 5 */
 @media (max-width: 320px) {
-
+  .main-slider {
+    height: 350px;
+  }
 }
