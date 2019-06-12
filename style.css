@@ -67,12 +67,12 @@ html, body {
 
 
 .main-slider {
-  margin: 50px auto 50px auto;
+  margin: 15px auto 15px auto;
   width: 100%;
-  max-width: 700px;
+  max-width: 480px;
   
-  height: 450px;
-  max-height: 450px;
+  height: 548px;
+  max-height: 548px;
   
   display: flex;
   justify-content: center;

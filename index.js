@@ -17,7 +17,7 @@ const addSliderButtons = (count) => {
 
 const addImg = () => {
   const container = document.querySelector('.main-slider');
-  const countImg = 4;
+  const countImg = 7;
   for (let i = 0; i < countImg; i++) {
     const img = document.createElement('img');
     img.src = `assets/${i+1}.jpg`;
