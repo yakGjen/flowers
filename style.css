@@ -2,7 +2,13 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #ffffff;
+  /*background-image: url(assets/background.jpg);
+  background-size: contain;*/
+}
+
+body {
+  background-image: url(assets/background.jpg);
+  background-size: contain;
 }
 
 .wrapper {
@@ -16,7 +22,6 @@ html, body {
 }
 
 .header {
-  /*height: 10vh;*/
   min-height: 10vh;
   padding: 0 40px;
   box-sizing: border-box;
@@ -27,7 +32,6 @@ html, body {
 
   font-size: 1.2em;
 
-  /*background: #f7f7f7;*/
   border-bottom: solid 1px grey;
   color: black;
 }
@@ -70,10 +74,12 @@ html, body {
   justify-content: flex-end;
 }
 
-.socials i {
-  margin: 0 5px;
-  height: 17px;
-  cursor: pointer;
+.socials a {
+  color: black;
+}
+.socials img {
+  width: 100px;
+  background: transparent;
 }
 
 
@@ -172,16 +178,8 @@ html, body {
   background: #f9f9fa;
 }
 
-/*.adderss-map {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1044px;
-  height: 500px;
-}*/
-
 h2 {
   margin: 0 0 20px 0;
-  /*font-family: 'Lobster', cursive;*/
   font-family: 'Pacifico', cursive;
   font-size: 2em;
   
