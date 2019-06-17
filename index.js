@@ -32,13 +32,20 @@ const addImg = () => {
   container.appendChild(addSliderButtons(countImg));
 };
 
-const animate = () => {
-  const imges = document.querySelectorAll('.slider-item');
-  const buttons = document.querySelectorAll('.slider-button-item');
-  imges[0].classList.add('opacity-img');
+
+const animate = (numb = 0) => {
+  /*const imges = document.querySelectorAll('.slider-item');
+  const buttons = document.querySelectorAll('.slider-button-item');*/
+  imges.forEach((item, i) => {
+    item.classList.remove('opacity-img');
+    buttons[i].classList.remove('slider-button-item-selected');
+  });
   
-  let count = 0;
-  setInterval(() => {
+  imges[numb].classList.add('opacity-img');
+  buttons[numb].classList.add('slider-button-item-selected');
+  
+  let count = numb;
+  timerId = setInterval(() => {
     if (count === 0) {
       imges[imges.length - 1].classList.remove('opacity-img');
       buttons[buttons.length - 1].classList.remove('slider-button-item-selected');
@@ -56,10 +63,30 @@ const animate = () => {
 };
 
 const selectImg = (elem) => {
+  clearInterval(timerId);
   
+  const numImg = +elem.id.substr(-1, 1);
+  /*imges.forEach((item, i) => {
+    item.classList.remove('opacity-img');
+    buttons[i].classList.remove('slider-button-item-selected');
+    
+    if (i === numImg - 1) {
+      item.classList.add('opacity-img');
+      buttons[i].classList.add('slider-button-item-selected');
+    }
+  });*/
+  
+  
+  animate(numImg - 1);
 };
 
 addImg();
+
+const imges = document.querySelectorAll('.slider-item');
+const buttons = document.querySelectorAll('.slider-button-item');
+
+let timerId;
+
 animate();
 
 
