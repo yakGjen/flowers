@@ -189,14 +189,10 @@ body {
   background: #f9f9fa;
 }
 
-.footer {
-  /*padding: 10px 50px;
-  
-  display: flex;
-  justify-content: flex-end;
-  
-  border-top: solid 1px grey;*/
+.address p {
+  text-align: justify;
 }
+
 
 h2 {
   margin: 0 0 20px 0;
@@ -332,4 +328,11 @@ h2 {
   .main-slider {
     height: 350px;
   }
+  
+  /*.address {
+    padding: 20px 20px;
+    box-sizing: border-box;
+
+    background: #f9f9fa;
+  }*/
 }
