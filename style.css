@@ -21,10 +21,19 @@ body {
 .header {
   min-height: 10vh;
   padding: 0 40px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   font-size: 1.2em;
@@ -54,14 +63,25 @@ body {
   
   width: 60%;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .menu a {
   padding: 0 30px;
+  
+  -webkit-transition: all 0.2s 0s linear;
   
   transition: all 0.2s 0s linear;
   
@@ -76,7 +96,13 @@ body {
 .socials {
   width: 20%;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -101,11 +127,19 @@ body {
   height: 548px;
   max-height: 548px;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   position: relative;
   overflow: hidden;
+  
+  -webkit-box-shadow: 0 0 10px -2px black;
   
   box-shadow: 0 0 10px -2px black;
 }
@@ -116,6 +150,8 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  
+  -webkit-transition: all 0.7s 0s linear;
   
   transition: all 0.7s 0s linear;
   
@@ -137,10 +173,13 @@ body {
   width: 10px;
   height: 10px;
   
+  -webkit-transition: all 0.7s 0s linear;
+  
   transition: all 0.7s 0s linear;
   
   border: solid 2px grey;
   border-radius: 50%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   
   cursor: pointer;
@@ -151,6 +190,7 @@ body {
 
 .about {
   padding: 20px 50px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #f9f9fa;
 }
@@ -176,6 +216,7 @@ body {
 
 .payment {
   padding: 20px 50px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .payment p {
@@ -184,6 +225,7 @@ body {
 
 .address {
   padding: 20px 50px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   
   background: #f9f9fa;
@@ -206,11 +248,20 @@ h2 {
   width: 50px;
   height: 50px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px 0 grey;
   box-shadow: 0 0 5px 0 grey;
 
   position: fixed;
@@ -256,7 +307,12 @@ h2 {
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
   .menu nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   
@@ -286,6 +342,7 @@ h2 {
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
   .header {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   
@@ -328,11 +385,4 @@ h2 {
   .main-slider {
     height: 350px;
   }
-  
-  /*.address {
-    padding: 20px 20px;
-    box-sizing: border-box;
-
-    background: #f9f9fa;
-  }*/
 }
